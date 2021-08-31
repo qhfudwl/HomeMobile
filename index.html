@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>모바일</title>
+        <link rel="stylesheet" href="css/common.css">
+        <meta name="viewport" content="width=divice-width">
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <!--
+            jquery.com
+            -> download
+            -> 끝에 release notes click
+            -> download 두 개 링크 중 아무거나 하나 복사
+            -> index.html 에다가 넣기 (한거 보자)
+        -->
+    </head>
+    <body>
+        <header id="header">
+            <h1>mobile</h1>
+            <a href="#" class="toggle">toggle</a>
+        </header>
+        <nav id="toggleGnb">
+            <h2 class="hidden">첫번째 메뉴</h2>
+            <ul>
+                <li><a href="#">버튼</a></li>
+                <li><a href="#">버튼</a></li>
+                <li><a href="#">버튼</a></li>
+                <li><a href="#">버튼</a></li>
+                <li><a href="#">버튼</a></li>
+                <li><a href="#">버튼</a></li>
+                <li><a href="#">버튼</a></li>
+                <li><a href="#">버튼</a></li>
+            </ul>
+        </nav>
+        <script>
+            $("#toggleGnb").hide();
+            $(".toggle").on('click', function(){
+                $("#toggleGnb").slideToggle();
+            })
+        </script>
+        <nav id="topGnb">
+            <h2 class="hidden">두번째 메뉴</h2>
+            <ul>
+                <li><a href="#">버튼</a></li>
+                <li><a href="#">버튼</a></li>
+                <li><a href="#">버튼</a></li>
+                <li><a href="#">버튼</a></li>
+            </ul>
+        </nav>
+        <main>
+            <section id="content">
+                <header id="contentHeader">
+                    <h2>Lorem ipsum</h2>
+                    <time datetime="2013-10-10">2013-10-10-Birthday</time>
+                </header>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+            </section>
+        <footer id="footer">
+            <address>HTML5+ CSS3 Basic</address>
+            <small>website layout basic</small>
+        </footer>
+    </body>
+</html>

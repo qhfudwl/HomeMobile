@@ -1,0 +1,60 @@
+@charset "utf-8";
+/* 초기화 */
+body, h1, h2, h3, h4, h5, h6, p, ul {margin: 0; padding: 0;}
+li {list-style: none;}
+a {text-decoration: none;}
+address, small {font-style: normal; font-size: 1em;}
+.hidden {position: absolute; left: -9999px;}
+/* header */
+#header {
+    text-transform: uppercase; background: #000; color: #fff;
+    height: 50px;
+}
+#header h1 {margin-left: 10px; line-height: 50px;}
+/* toggle button */
+#header a {
+    position: absolute; top: 10px; right: 10px;
+    text-indent: -9999px; border-radius: 100%;
+    width: 30px; height: 30px; background: #fff;
+}
+#header a:hover {background: #f700ad;}
+/* toggle gnb */
+#toggleGnb {text-align: center; padding: 10px; background: #800000;}
+#toggleGnb ul {overflow: hidden; background: #000;}
+#toggleGnb ul li {
+    float: left; width: 100px; height: 40px;
+    margin: 0 10px 10px;
+}
+/* a 태그에 display: block;을 적용시켜 li 태그의 width 값을 상속 */
+#toggleGnb ul li a {
+    display: block;
+    height: 40px; line-height: 40px;
+    margin: 0 auto;
+    border-bottom: 1px solid #fff; color: #fff;
+}
+#toggleGnb a:hover {color: #f700ad; border-color: #f700ad;}
+/* topGnb */
+#topGnb {text-align: center;}
+/* width를 %로 넣어서 현재 화면에 표시되는 너비의 n%가 되도록한다. */
+#topGnb ul li {
+    float: left; width: 25%; height: 40px;
+    background: #282828;
+}
+#topGnb ul li a {
+    display: block; height: 40px; line-height: 40px; color: #fff;
+    position: relative;
+}
+#topGnb a:hover {background: #800000;}
+#topGnb a::after {
+    content: ""; height: 20px; position: absolute; top: 10px; left: -1px;
+    border-left: 1px solid #fff;
+}
+/* main */
+#contentHeader {clear: both; padding: 20px;}
+#content p {margin: 0 10px 10px;}
+/* footer */
+#footer {
+    border-top: 3px solid #000; 
+    padding: 20px 0 0; margin-top: 30px; text-align: center;
+}
+#footer address {font-weight: bold;}
